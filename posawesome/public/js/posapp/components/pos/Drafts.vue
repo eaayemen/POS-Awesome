@@ -30,8 +30,8 @@
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="error" dark @click="close_dialog">Close</v-btn>
-          <v-btn color="primary" dark @click="submit_dialog">Select</v-btn>
+          <v-btn color="error" dark @click="close_dialog">try</v-btn>
+          <v-btn color="success" dark @click="submit_dialog">try</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>

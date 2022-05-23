@@ -1,4 +1,5 @@
-<template>
+ <template>
+
   <v-app class="container1">
     <v-main>
       <Navbar @changePage="setPage($event)"></Navbar>
@@ -10,6 +11,8 @@
 </template>
 
 <script>
+
+
 import Navbar from './components/Navbar.vue';
 import POS from './components/pos/Pos.vue';
 

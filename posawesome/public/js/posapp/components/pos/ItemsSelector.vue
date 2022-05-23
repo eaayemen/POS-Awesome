@@ -60,7 +60,7 @@
                 v-for="(item, idx) in filtred_items"
                 :key="idx"
                 xl="2"
-                lg="3"
+                lg="2"
                 md="6"
                 sm="6"
                 cols="6"

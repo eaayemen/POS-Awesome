@@ -145,26 +145,7 @@
                       :disabled="!!item.posa_is_offer || !!item.posa_is_replace"
                     ></v-text-field>
                   </v-col>
-                  <v-col cols="4">
-                    <v-select
-                      dense
-                      background-color="white"
-                      :label="frappe._('UOM')"
-                      v-model="item.uom"
-                      :items="item.item_uoms"
-                      outlined
-                      item-text="uom"
-                      item-value="uom"
-                      hide-details
-                      @change="calc_uom(item, $event)"
-                      :disabled="
-                        !!invoice_doc.is_return ||
-                        !!item.posa_is_offer ||
-                        !!item.posa_is_replace
-                      "
-                    >
-                    </v-select>
-                  </v-col>
+                  
                   <v-col cols="4">
                     <v-text-field
                       dense
@@ -580,10 +561,10 @@
               <v-btn
                 block
                 class="pa-0"
-                color="warning"
+                color="success"
                 dark
                 @click="get_draft_invoices"
-                >{{ __('Held') }}</v-btn
+                ><span class="fa fa-refresh "> </span></v-btn
               >
             </v-col>
             <v-col cols="6" class="pa-1">
@@ -594,17 +575,17 @@
                 color="info"
                 dark
                 @click="open_returns"
-                >{{ __('Return') }}</v-btn
+                ><span class="fa fa-undo"> </span></v-btn
               >
             </v-col>
             <v-col cols="6" class="pa-1">
               <v-btn
                 block
-                class="pa-0"
-                color="error"
+                class="pa-0 fa fa-refresh "
+                color="warning"
                 dark
                 @click="cancel_dialog = true"
-                >{{ __('Cancel') }}</v-btn
+                ><span class="fa fa-remove"> </span></v-btn
               >
             </v-col>
             <v-col cols="6" class="pa-1">
@@ -614,7 +595,7 @@
                 color="success"
                 dark
                 @click="new_invoice"
-                >{{ __('Save/New') }}</v-btn
+                ><span class="fa fa-save"> </span></v-btn
               >
             </v-col>
             <v-col cols="12" class="pa-1">
@@ -624,7 +605,7 @@
                 color="primary"
                 @click="show_payment"
                 dark
-                >{{ __('PAY') }}</v-btn
+                ><span class="fa fa-money"> </span></v-btn
               >
             </v-col>
           </v-row>
